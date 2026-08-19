@@ -1,0 +1,350 @@
+Zezoyah Product Import — Needs Manual Review
+Generated: 2026-08-19T14:30:49.909Z
+
+all-olive-trench-jacket.html (slug: all-olive-trench-jacket)
+  Issues: no images found/mapped
+  Name: All olive trench jacket
+  Price: 125000 cents
+  Images: 0
+
+aqua-stones-layers.html (slug: aqua-stones-layers)
+  Issues: no images found/mapped
+  Name: Aqua stones layers
+  Price: 55000 cents
+  Images: 0
+
+assymetric-cape.html (slug: assymetric-cape)
+  Issues: no images found/mapped
+  Name: Assymetric cape
+  Price: 140000 cents
+  Images: 0
+
+baggy-pants.html (slug: baggy-pants)
+  Issues: no images found/mapped
+  Name: Baggy pants
+  Price: 97500 cents
+  Images: 0
+
+basic-skirt-baby-pink.html (slug: basic-skirt-baby-pink)
+  Issues: no images found/mapped
+  Name: Basic Skirt
+  Price: 107500 cents
+  Images: 0
+
+basic-with-fringes.html (slug: basic-with-fringes)
+  Issues: no images found/mapped
+  Name: Basic with fringes
+  Price: 90000 cents
+  Images: 0
+
+black-skirt.html (slug: black-skirt)
+  Issues: no images found/mapped
+  Name: Black Skirt
+  Price: 120000 cents
+  Images: 0
+
+blue-starfish.html (slug: blue-starfish)
+  Issues: no images found/mapped
+  Name: Blue starfish
+  Price: 45000 cents
+  Images: 0
+
+butterfly-cut-abaya-black.html (slug: butterfly-cut-abaya-black)
+  Issues: no images found/mapped
+  Name: Butterfly cut Abaya - Black
+  Price: 190000 cents
+  Images: 0
+
+calligraphy-poncho.html (slug: calligraphy-poncho)
+  Issues: no images found/mapped
+  Name: Calligraphy Poncho
+  Price: 175000 cents
+  Images: 0
+
+chuncky-goodies.html (slug: chuncky-goodies)
+  Issues: no images found/mapped
+  Name: Chuncky goodies
+  Price: 65000 cents
+  Images: 0
+
+comfort-jacket.html (slug: comfort-jacket)
+  Issues: no images found/mapped
+  Name: Comfort Jacket
+  Price: 175000 cents
+  Images: 0
+
+cropped-trench-jacket.html (slug: cropped-trench-jacket)
+  Issues: no images found/mapped
+  Name: Cropped trench jacket
+  Price: 125000 cents
+  Images: 0
+
+cross-blouse-white.html (slug: cross-blouse-white)
+  Issues: no images found/mapped
+  Name: Cross blouse
+  Price: 97500 cents
+  Images: 0
+
+delicate-shore.html (slug: delicate-shore)
+  Issues: no images found/mapped
+  Name: Delicate shore
+  Price: 55000 cents
+  Images: 0
+
+denim-trench-jacket.html (slug: denim-trench-jacket)
+  Issues: no images found/mapped
+  Name: Brown denim trench jacket
+  Price: 125000 cents
+  Images: 0
+
+embroidered-set-burguany.html (slug: embroidered-set-burguany)
+  Issues: no images found/mapped
+  Name: Embroidered set - Burgundy
+  Price: 145000 cents
+  Images: 0
+
+embroidered-set-olive.html (slug: embroidered-set-olive)
+  Issues: no images found/mapped
+  Name: Embroidered set - Olive
+  Price: 145000 cents
+  Images: 0
+
+emerald-layers.html (slug: emerald-layers)
+  Issues: no images found/mapped
+  Name: Emerald layers
+  Price: 65000 cents
+  Images: 0
+
+fringes-shirt-vibrant-yellow.html (slug: fringes-shirt-vibrant-yellow)
+  Issues: no images found/mapped
+  Name: Fringes shirt
+  Price: 125000 cents
+  Images: 0
+
+fushia-shirt.html (slug: fushia-shirt)
+  Issues: no images found/mapped
+  Name: Fushia shirt
+  Price: 97500 cents
+  Images: 0
+
+golden-coins-layers.html (slug: golden-coins-layers)
+  Issues: no images found/mapped
+  Name: Golden coins layers
+  Price: 55000 cents
+  Images: 0
+
+high-low-abaya-black.html (slug: high-low-abaya-black)
+  Issues: no images found/mapped
+  Name: Assymetric cape - Black
+  Price: 140000 cents
+  Images: 0
+
+lace-set.html (slug: lace-set)
+  Issues: no images found/mapped
+  Name: Lace set
+  Price: 140000 cents
+  Images: 0
+
+lace-top.html (slug: lace-top)
+  Issues: no images found/mapped
+  Name: Lace top
+  Price: 135000 cents
+  Images: 0
+
+layered-dress-beige-x-white.html (slug: layered-dress-beige-x-white)
+  Issues: no images found/mapped
+  Name: Layered Dress - Beige x White
+  Price: 97500 cents
+  Images: 0
+
+layered-dress-white-x-blue.html (slug: layered-dress-white-x-blue)
+  Issues: no images found/mapped
+  Name: Layered dress - White x blue
+  Price: 97500 cents
+  Images: 0
+
+leather-brown-cape-jacket.html (slug: leather-brown-cape-jacket)
+  Issues: no images found/mapped
+  Name: Leather brown cape/ jacket
+  Price: 125000 cents
+  Images: 0
+
+leather-suede-cape-jacket.html (slug: leather-suede-cape-jacket)
+  Issues: no images found/mapped
+  Name: Leather/ suede - Cape/ jacket
+  Price: 145000 cents
+  Images: 0
+
+maxi-shirt-basil-green.html (slug: maxi-shirt-basil-green)
+  Issues: no images found/mapped
+  Name: Maxi shirt
+  Price: 135000 cents
+  Images: 0
+
+mocha-skirt.html (slug: mocha-skirt)
+  Issues: no images found/mapped
+  Name: Mocha Skirt
+  Price: 97500 cents
+  Images: 0
+
+moheir-jacket.html (slug: moheir-jacket)
+  Issues: no images found/mapped
+  Name: Moheir Jacket
+  Price: 220000 cents
+  Images: 0
+
+off-white-stripped-abaya.html (slug: off-white-stripped-abaya)
+  Issues: no images found/mapped
+  Name: Off-white stripped Abaya
+  Price: 185000 cents
+  Images: 0
+
+oversized-beach-dress-1.html (slug: oversized-beach-dress-1)
+  Issues: no images found/mapped
+  Name: Oversized beach Dress
+  Price: 165000 cents
+  Images: 0
+
+oversized-cotton-shirt-fushia.html (slug: oversized-cotton-shirt-fushia)
+  Issues: no images found/mapped
+  Name: Oversized cotton shirt
+  Price: 97500 cents
+  Images: 0
+
+oversized-maxi-shirt.html (slug: oversized-maxi-shirt)
+  Issues: no images found/mapped
+  Name: Oversized Maxi Shirt
+  Price: 137500 cents
+  Images: 0
+
+oversized-shirt-baby-blue.html (slug: oversized-shirt-baby-blue)
+  Issues: no images found/mapped
+  Name: Oversized shirt
+  Price: 140000 cents
+  Images: 0
+
+pearl-layers-and-chuncky-golden-piece.html (slug: pearl-layers-and-chuncky-golden-piece)
+  Issues: no images found/mapped
+  Name: Pearl layers and chuncky golden piece
+  Price: 65000 cents
+  Images: 0
+
+plastic-forest.html (slug: plastic-forest)
+  Issues: no images found/mapped
+  Name: Plastic forest
+  Price: 45000 cents
+  Images: 0
+
+purple-leather-cape-jacket.html (slug: purple-leather-cape-jacket)
+  Issues: no images found/mapped
+  Name: Purple leather cape/ jacket
+  Price: 125000 cents
+  Images: 0
+
+red-by-the-ocean.html (slug: red-by-the-ocean)
+  Issues: no images found/mapped
+  Name: Red by the ocean
+  Price: 55000 cents
+  Images: 0
+
+shimmery-thread.html (slug: shimmery-thread)
+  Issues: no images found/mapped
+  Name: Shimmery thread
+  Price: 45000 cents
+  Images: 0
+
+soft-plushy-top.html (slug: soft-plushy-top)
+  Issues: no images found/mapped
+  Name: Soft plushy top
+  Price: 95000 cents
+  Images: 0
+
+stripped-avaya.html (slug: stripped-avaya)
+  Issues: no images found/mapped
+  Name: Oxidé stripped Abaya
+  Price: 185000 cents
+  Images: 0
+
+teddy-top.html (slug: teddy-top)
+  Issues: no images found/mapped
+  Name: Teddy top
+  Price: 125000 cents
+  Images: 0
+
+tweed-textured-jacket-burgundy.html (slug: tweed-textured-jacket-burgundy)
+  Issues: no images found/mapped
+  Name: Tweed textured jacket - Burgundy
+  Price: 160000 cents
+  Images: 0
+
+tweed-textured-jacket-emerald-green.html (slug: tweed-textured-jacket-emerald-green)
+  Issues: no images found/mapped
+  Name: Tweed textured jacket - Green
+  Price: 125000 cents
+  Images: 0
+
+two-pieces-set.html (slug: two-pieces-set)
+  Issues: no images found/mapped
+  Name: Two pieces set
+  Price: 195000 cents
+  Images: 0
+
+untitled-14may_15-59-04.html (slug: untitled-14may_15-59-04)
+  Issues: no images found/mapped
+  Name: Flowy block shirt
+  Price: 105000 cents
+  Images: 0
+
+untitled-15may_14-20-00.html (slug: untitled-15may_14-20-00)
+  Issues: no images found/mapped
+  Name: High low block shirt
+  Price: 97500 cents
+  Images: 0
+
+untitled-6dec_17-17.html (slug: untitled-6dec_17-17)
+  Issues: no images found/mapped
+  Name: Tweed textured jacket - Navy blue
+  Price: 125000 cents
+  Images: 0
+
+untitled-6dec_17-31.html (slug: untitled-6dec_17-31)
+  Issues: no images found/mapped
+  Name: Gabardine shirt/jacket
+  Price: 90000 cents
+  Images: 0
+
+untitled-8aug_01-40-22.html (slug: untitled-8aug_01-40-22)
+  Issues: no images found/mapped
+  Name: Aubergine layers
+  Price: 55000 cents
+  Images: 0
+
+untitled-8aug_02-52-05.html (slug: untitled-8aug_02-52-05)
+  Issues: no images found/mapped
+  Name: Rayé pants
+  Price: 130000 cents
+  Images: 0
+
+velvet-flowy-butterfly-abaya.html (slug: velvet-flowy-butterfly-abaya)
+  Issues: no images found/mapped
+  Name: Velvet Flowy Butterfly Abaya
+  Price: 225000 cents
+  Images: 0
+
+velvet-x-paillette-poncho-black-x-paillette-oxide-copy.html (slug: velvet-x-paillette-poncho-black-x-paillette-oxide-copy)
+  Issues: no images found/mapped
+  Name: Velvet x Paillette Poncho -  Off-white * gold Paillette
+  Price: 175000 cents
+  Images: 0
+
+velvet-x-paillette-poncho-black-x-paillette-oxide.html (slug: velvet-x-paillette-poncho-black-x-paillette-oxide)
+  Issues: no images found/mapped
+  Name: Velvet x Paillette Poncho -  Black x Paillette Oxidé
+  Price: 175000 cents
+  Images: 0
+
+wide-leg-pants.html (slug: wide-leg-pants)
+  Issues: no images found/mapped
+  Name: Wide leg pants
+  Price: 105000 cents
+  Images: 0

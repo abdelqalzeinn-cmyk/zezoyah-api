@@ -1,0 +1,51 @@
+# Render deployment config for Zezoyah Backend API
+# Docs: https://render.com/docs/blueprint-spec
+#
+# This deploys the /server folder as a Render Web Service (the Express API).
+# The frontend (modified static HTML/CSS/JS) is deployed separately — see
+# the frontend README for instructions (Render Static Site, Netlify, etc.)
+
+services:
+  - type: web
+    name: zezoyah-api
+    runtime: node
+    plan: starter  # upgrade to 'standard' for persistent disk + more RAM
+    buildCommand: npm install
+    startCommand: node src/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000  # Render injects PORT automatically; this is a fallback
+      - key: JWT_SECRET
+        sync: false  # set manually in Render dashboard — use a long random string
+      - key: HCAPTCHA_SECRET
+        sync: false  # set manually in Render dashboard
+      - key: HCAPTCHA_SITE_KEY
+        sync: false  # set manually in Render dashboard (safe to expose to frontend)
+      - key: FRONTEND_ORIGIN
+        sync: false  # set to your frontend domain, e.g. https://zezoyah.onrender.com
+      - key: IMAGE_STORAGE_DRIVER
+        value: local  # change to "s3" if using R2/S3
+      - key: IMAGE_LOCAL_PATH
+        value: /opt/render/project/uploads  # mount a Render Disk here if using local
+      - key: DATABASE_PATH
+        value: /opt/render/project/data/zezoyah.db  # mount a Render Disk here for persistence
+      # Uncomment and set in Render dashboard for S3/R2 storage:
+      # - key: S3_BUCKET
+      #   sync: false
+      # - key: S3_REGION
+      #   value: auto
+      # - key: S3_ACCESS_KEY_ID
+      #   sync: false
+      # - key: S3_SECRET_ACCESS_KEY
+      #   sync: false
+      # - key: S3_ENDPOINT
+      #   sync: false
+    # Mount a persistent disk so SQLite DB + uploaded images survive redeploys
+    # (Only available on 'standard' plan and above)
+    disk:
+      name: zezoyah-data
+      mountPath: /opt/render/project/data
+      sizeGB: 1  # increase as needed

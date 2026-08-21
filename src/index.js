@@ -12,14 +12,26 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
+// Load .env file
+try {
+  require('dotenv').config();
+} catch (e) {
+  // dotenv not installed, skip
+}
+
 // Ensure DB is initialized
 const { db } = require('./db');
+const { initEmailSchema } = require('./services/email-db');
+
+// Initialize email schema
+initEmailSchema();
 
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/products');
 const imageRoutes = require('./routes/images');
 const cartRoutes = require('./routes/cart');
 const orderRoutes = require('./routes/orders');
+const emailAdminRoutes = require('./routes/email-admin');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -46,6 +58,10 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+const { sessionMiddleware } = require('./middleware/session');
+app.use(sessionMiddleware);
+
+
 // Trust proxy (needed for correct req.ip behind Render's load balancer)
 app.set('trust proxy', 1);
 
@@ -66,8 +82,8 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Serve the local uploads folder statically at /api/images
-app.use('/api/images', express.static(path.join(__dirname, '../uploads')));
+// Serve images with signature protection (old static route removed)
+// app.use('/api/images', express.static(path.join(__dirname, '../uploads')));
 
 // API routes
 app.use('/api/auth', authRoutes);
@@ -75,6 +91,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/images', imageRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/email', emailAdminRoutes);
 
 // 404 for unknown /api routes
 app.use('/api', (req, res) => {
@@ -98,6 +115,10 @@ if (require.main === module) {
     console.log(`  CORS origins: ${corsOrigins.join(', ')}`);
     console.log(`  Image storage driver: ${require('./storage').DRIVER}`);
     console.log(`  Health check: http://localhost:${PORT}/api/health\n`);
+    
+    // Start cron jobs
+    const { startCronJobs } = require('./jobs/cron-jobs');
+    startCronJobs();
   });
 }
 

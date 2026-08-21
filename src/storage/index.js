@@ -50,7 +50,7 @@ async function getImageStream(filename) {
 }
 
 function getLocalImage(filename) {
-  const localPath = process.env.IMAGE_LOCAL_PATH || path.join(__dirname, '..', 'uploads');
+  const localPath = process.env.IMAGE_LOCAL_PATH || path.join(__dirname, '..', '..', 'uploads');
   const fullPath = path.join(localPath, filename);
   if (!fs.existsSync(fullPath)) {
     const err = new Error('Image not found');

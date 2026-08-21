@@ -42,13 +42,18 @@ function issueAuthCookie(res, user) {
     expiresIn: '7d',
   });
 
-  const isLocalDev = isLocalhostOrigin();
+  // Frontend and backend are always different origins (different ports in
+  // dev, different domains in prod), which browsers treat as cross-site.
+  // Cross-site cookies REQUIRE SameSite=None + Secure — SameSite=Lax is
+  // silently dropped on cross-origin fetch/XHR, which broke logged-in
+  // sessions from persisting. `localhost` counts as a secure context even
+  // over plain HTTP, so Secure:true is safe in dev too.
   const cookieOptions = {
     httpOnly: true,
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     path: '/',
-    sameSite: isLocalDev ? 'lax' : 'none',
-    secure: isLocalDev ? false : true,
+    sameSite: 'none',
+    secure: true,
   };
 
   res.cookie('zezoyah_token', token, cookieOptions);
@@ -56,21 +61,12 @@ function issueAuthCookie(res, user) {
 }
 
 function clearAuthCookie(res) {
-  const isLocalDev = isLocalhostOrigin();
   res.clearCookie('zezoyah_token', {
     httpOnly: true,
     path: '/',
-    sameSite: isLocalDev ? 'lax' : 'none',
-    secure: isLocalDev ? false : true,
+    sameSite: 'none',
+    secure: true,
   });
-}
-
-function isLocalhostOrigin() {
-  const origins = process.env.FRONTEND_ORIGIN || '';
-  return origins
-    .split(',')
-    .map((o) => o.trim())
-    .some((o) => o.includes('localhost') || o.includes('127.0.0.1'));
 }
 
 module.exports = { authMiddleware, requireAuth, issueAuthCookie, clearAuthCookie, JWT_SECRET };

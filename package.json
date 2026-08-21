@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "import-products": "node src/scripts/import-products.js"
+    "import-products": "node src/scripts/import-products.js",
+    "test:email": "node scripts/test-email.js",
+    "email:abandoned": "node scripts/trigger-abandoned.js",
+    "email:sale": "node scripts/trigger-sale.js"
   },
   "engines": {
     "node": ">=18"
@@ -17,8 +20,10 @@
     "better-sqlite3": "^13.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^6.10.1",
     "uuid": "^14.0.2"
   }
 }

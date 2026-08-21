@@ -41,14 +41,19 @@ function getOrCreateCart(req, res) {
     cartCookie = uuidv4();
     const result = db.prepare('INSERT INTO carts (cart_cookie) VALUES (?)').run(cartCookie);
     cart = db.prepare('SELECT * FROM carts WHERE id = ?').get(result.lastInsertRowid);
-    // Set the cookie (10 year expiry — cart is long-lived for guests)
-    const isLocalDev = (process.env.FRONTEND_ORIGIN || '').includes('localhost');
+    // Set the cookie (10 year expiry — cart is long-lived for guests).
+    // Frontend and backend run on different ports/origins (even in local dev),
+    // which browsers treat as cross-site. Cross-site cookies REQUIRE
+    // SameSite=None + Secure — SameSite=Lax is silently dropped on fetch/XHR
+    // calls that aren't top-level navigations, which was causing every
+    // request to spin up a brand-new empty cart. `localhost` counts as a
+    // secure context even over plain HTTP, so Secure:true works in dev too.
     res.cookie('zezoyah_cart_id', cartCookie, {
       httpOnly: true,
       maxAge: 10 * 365 * 24 * 60 * 60 * 1000,
       path: '/',
-      sameSite: isLocalDev ? 'lax' : 'none',
-      secure: isLocalDev ? false : true,
+      sameSite: 'none',
+      secure: true,
     });
   }
   return cart;

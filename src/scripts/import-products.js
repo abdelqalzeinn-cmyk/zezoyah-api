@@ -167,17 +167,39 @@ function extractProductFromHTML(html) {
 }
 
 // ---- Step 3: Extract image references from HTML ----
-// Handles TWO cases:
+// Handles THREE cases:
 //   Case A: HTML references OLD Shopify names (e.g. img/rn-image_picker_lib_temp_XXX.jpg)
 //           → uses manifest OLD_NAME→NEW_NAME mapping
-//   Case B: HTML already references NEW sequential names (e.g. img/img_0001.jpg)
-//           → uses the filename directly (manifest not needed)
+//   Case B: HTML already references NEW sequential names via a local
+//           path (e.g. img/img_0001.jpg) → uses the filename directly
+//   Case C: HTML already references NEW sequential names via the API
+//           (e.g. http://localhost:4000/api/images/img_0001.jpg or
+//           just /api/images/img_0001.jpg) → uses the filename directly.
+//           This is the URL shape produced by
+//           migration-scripts/01-rename-and-map-images.js, which rewrites
+//           every image reference to point at the backend's image API
+//           instead of a local img/ folder. Without this case, every
+//           already-migrated product page has ZERO extractable image refs
+//           (the old "img/<name>" regex never matches "api/images/<name>"),
+//           so it gets wrongly flagged as "no images found/mapped" even
+//           though the images are right there in the HTML.
 function extractImageRefs(html, oldToNew) {
   const refs = []; // array of { oldName, newName } in order of appearance
   const seen = new Set();
 
-  // Collect all img/ references in order of appearance
-  const allRefsRegex = /img\/([A-Za-z0-9_.\-]+)/g;
+  // Case C: already-migrated API image URLs (checked first — these are
+  // unambiguous and don't need manifest lookup at all)
+  const apiRefsRegex = /api\/images\/([A-Za-z0-9_.\-]+)/g;
+  let am;
+  while ((am = apiRefsRegex.exec(html)) !== null) {
+    const refName = am[1];
+    if (seen.has(refName)) continue;
+    seen.add(refName);
+    refs.push({ oldName: refName, newName: refName });
+  }
+
+  // Collect all img/ references in order of appearance (Cases A and B)
+  const allRefsRegex = /(?<!api\/)img\/([A-Za-z0-9_.\-]+)/g;
   let m;
   while ((m = allRefsRegex.exec(html)) !== null) {
     const refName = m[1]; // whatever is after "img/"
